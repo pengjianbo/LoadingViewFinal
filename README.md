@@ -15,6 +15,11 @@
 * 支持自动刷新
 * ……
 
+# Sample apk下载
+[点击](https://raw.githubusercontent.com/pengjianbo/LoadingViewFinal/master/LoadingViewFinal-sample.apk)下载到设备<br/>
+扫描二维码下载<br/>
+![](images/qrcode.jpg)
+
 # 如何方法
  **Eclipse请copy源码或aar方式**
  
@@ -158,7 +163,7 @@ mRecyclerViewFinal.setNoLoadMoreHideView(true/false);//默认false不隐藏
 
 **<font color='red'>注：onLoadMoreComplete()一定要在setHasLoadMore()和showFailUI()之后调用</font>**
 
-具体代码[请点击]()
+具体实现代码[请点击](https://github.com/pengjianbo/LoadingViewFinal/blob/master/app/src/main/java/cn/finalteam/loadingviewfinal/sample/ui/fragment/ptr/PtrListViewFragment.java)
 
 ## 使用SwipeRefreshLayout+RecyclerView下拉刷新/加载更多案例
 
