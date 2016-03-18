@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <cn.finalteam.loadingviewfinal.PtrClassicFrameLayout
+        android:id="@+id/ptr_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <cn.finalteam.loadingviewfinal.ExpandableListViewFinal
+            android:id="@+id/lv_games"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="#00000000"
+            android:divider="@null"
+            app:loadMoreMode="click" />
+
+    </cn.finalteam.loadingviewfinal.PtrClassicFrameLayout>
+
+    <include layout="@layout/layout_empty_view"/>
+</FrameLayout>

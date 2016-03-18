@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <cn.finalteam.loadingviewfinal.PtrClassicFrameLayout
+        android:id="@+id/ptr_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <cn.finalteam.loadingviewfinal.ScrollViewFinal
+            android:id="@+id/sv_games"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="#00000000"
+            android:divider="@null"
+            app:loadMoreMode="scroll">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="-----ScrollView + LinearListView-----"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <com.linearlistview.LinearListView
+                    android:id="@+id/linear_list_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"/>
+            </LinearLayout>
+        </cn.finalteam.loadingviewfinal.ScrollViewFinal>
+
+    </cn.finalteam.loadingviewfinal.PtrClassicFrameLayout>
+
+    <include layout="@layout/layout_empty_view"/>
+</FrameLayout>

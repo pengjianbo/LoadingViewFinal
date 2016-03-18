@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">LoadingViewFinal</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string-array name="load_more_style">
+        <item>Default</item>
+        <item>BallPulse</item>
+        <item>BallGridPulse</item>
+        <item>BallClipRotate</item>
+        <item>BallClipRotatePulse</item>
+        <item>SquareSpin</item>
+        <item>BallClipRotateMultiple</item>
+        <item>BallPulseRise</item>
+        <item>BallRotate</item>
+        <item>CubeTransition</item>
+        <item>BallZigZag</item>
+        <item>BallZigZagDeflect</item>
+        <item>BallTrianglePath</item>
+        <item>BallScale</item>
+        <item>LineScale</item>
+        <item>LineScaleParty</item>
+        <item>BallScaleMultiple</item>
+        <item>BallPulseSync</item>
+        <item>BallBeat</item>
+        <item>LineScalePulseOut</item>
+        <item>LineScalePulseOutRapid</item>
+        <item>BallScaleRipple</item>
+        <item>BallScaleRippleMultiple</item>
+        <item>BallSpinFadeLoader</item>
+        <item>LineSpinFadeLoader</item>
+        <item>TriangleSkewSpin</item>
+        <item>Pacman</item>
+        <item>BallGridBeat</item>
+        <item>SemiCircleSpin</item>
+    </string-array>
+</resources>

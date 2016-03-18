@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="2dp"
+    card_view:contentPadding= "5dp"
+    card_view:cardUseCompatPadding="true"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/ic_game_icon"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:src="@mipmap/ic_launcher"
+            android:scaleType="centerCrop"
+            />
+
+        <TextView
+            android:id="@+id/tv_game_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:text="@string/app_name"
+            android:background="#6A000000"
+            android:gravity="center_horizontal"
+            android:padding="3dp"
+            android:layout_alignBottom="@id/ic_game_icon"
+            />
+
+        <RatingBar
+            android:id="@+id/rb_game_rank"
+            style="@style/RatingBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:rating="4"
+            android:stepSize="0.1"
+            android:layout_below="@id/tv_game_name"
+            android:layout_marginTop="8dp"
+            />
+        <TextView
+            android:id="@+id/tv_game_socre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8.0分"
+            android:textColor="@color/text_gray"
+            android:layout_toRightOf="@id/rb_game_rank"
+            android:layout_below="@id/tv_game_name"
+            android:layout_margin="8dp"
+            android:textSize="12sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_game_player_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="热度:290"
+            android:layout_below="@id/rb_game_rank"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/grey700"
+            android:textSize="12sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_game_comment_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="评论数:290"
+            android:layout_toRightOf="@id/tv_game_player_number"
+            android:layout_below="@id/rb_game_rank"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:textSize="12sp"
+            android:textColor="@color/grey700"
+            />
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

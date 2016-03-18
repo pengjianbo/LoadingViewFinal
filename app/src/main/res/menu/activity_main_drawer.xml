@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_ptr"
+            android:title="Pull-To-Refresh" />
+        <item
+            android:id="@+id/nav_srf"
+            android:title="Swipe-Refresh-Layout" />
+
+        <item
+            android:id="@+id/nav_ptr_viewpager"
+            android:title="Ptr-ViewPager-Head" />
+
+        <item
+            android:id="@+id/nav_srl_viewpager"
+            android:title="SRL-ViewPager-Head" />
+
+        <item
+            android:id="@+id/nav_custom_loadmore"
+            android:title="Custom-LoadMore" />
+
+        <item
+            android:id="@+id/nav_more"
+            android:title="更多样式更新中…" />
+    </group>
+
+</menu>

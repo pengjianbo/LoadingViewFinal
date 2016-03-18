@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.finalteam.loadingviewfinal.SwipeRefreshLayoutFinal xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/refresh_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:refreshLoadingColor="@color/colorPrimary">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <include layout="@layout/layout_empty_view" />
+        </ScrollView>
+
+        <cn.finalteam.loadingviewfinal.GridViewFinal
+            android:id="@+id/gv_games"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="#00000000"
+            android:numColumns="2"
+            android:divider="@null"
+            app:loadMoreMode="scroll" />
+    </FrameLayout>
+
+</cn.finalteam.loadingviewfinal.SwipeRefreshLayoutFinal>
+
+
