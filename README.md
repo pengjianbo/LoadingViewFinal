@@ -58,6 +58,7 @@ SwipeRefreshLayout和UPTR两个下拉刷新库可以二选一
 
 ## Next Version
 * 优化UPTR连续下拉刷新问题
+* 结合OkHttpFinal快速集成数据请求方案
 
 ## 使用UPTR+RecyclerView下拉刷新/加载更多案例
 注：使用UPTR+ListView/GridView/ScrollView...几乎类同
