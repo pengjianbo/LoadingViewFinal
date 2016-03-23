@@ -29,29 +29,29 @@
 * 使用加载更多控件库
 
 ```gradle
-compile 'cn.finalteam.loadingviewfinal:loading-more-view:1.0.0'
+compile 'cn.finalteam.loadingviewfinal:loading-more-view:1.0.1'
 ```
 
 * 采用SwipeRefreshLayout下拉刷新库
 
 ```gradle
-compile 'cn.finalteam.loadingviewfinal:swipe-refresh-layout:1.0.0'
+compile 'cn.finalteam.loadingviewfinal:swipe-refresh-layout:1.0.1'
 ```
 * 采用UPTR下拉刷新
 
 ```gradle	
-compile 'cn.finalteam.loadingviewfinal:ultra-pull-to-refresh:1.0.0'
+compile 'cn.finalteam.loadingviewfinal:ultra-pull-to-refresh:1.0.1'
 ```
 * Load More Footer样式
 
 ```gradle
-compile 'cn.finalteam.loadingviewfinal:loading-more-style:1.0.0'
+compile 'cn.finalteam.loadingviewfinal:loading-more-style:1.0.1'
 ```
 
 * 如果你项目中使用了RecyclerView控件请添加
 
 ```gradle
-compile 'com.android.support:recyclerview-v7:23.2.1'
+compile 'com.android.support:recyclerview-v7:23.2.1'//recyclerview随便哪个版本都可以，没有强制使用23.2.1
 ```
 
 SwipeRefreshLayout和UPTR两个下拉刷新库可以二选一

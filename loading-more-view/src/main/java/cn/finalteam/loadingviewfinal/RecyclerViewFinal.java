@@ -296,6 +296,22 @@ public class RecyclerViewFinal extends RecyclerView implements OnScrollBottomLis
     }
 
     /**
+     * 设置OnItemClickListener
+     * @param listener
+     */
+    public void setOnItemClickListener(HeaderAndFooterRecyclerViewAdapter.OnItemClickListener listener) {
+        mHeaderAndFooterRecyclerViewAdapter.setOnItemClickListener(listener);
+    }
+
+    /**
+     * 设置OnItemLongClickListener
+     * @param listener
+     */
+    public void setOnItemLongClickListener(HeaderAndFooterRecyclerViewAdapter.OnItemLongClickListener listener) {
+        mHeaderAndFooterRecyclerViewAdapter.setOnItemLongClickListener(listener);
+    }
+
+    /**
      * 滚动到底部自动加载更多数据
      */
     private class RecyclerViewOnScrollListener extends RecyclerView.OnScrollListener {
