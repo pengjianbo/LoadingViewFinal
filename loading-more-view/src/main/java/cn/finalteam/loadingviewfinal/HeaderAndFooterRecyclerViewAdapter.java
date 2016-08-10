@@ -1,5 +1,6 @@
 package cn.finalteam.loadingviewfinal;
 
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.View;
@@ -63,7 +64,43 @@ public class HeaderAndFooterRecyclerViewAdapter extends RecyclerView.Adapter<Rec
             notifyItemRangeInserted(getHeadersCount(), mAdapter.getItemCount());
         }
     }
+    @Override
+    public void onAttachedToRecyclerView(RecyclerView recyclerView) {
+//        Log.e("HeaderAdapter", "onAttachedToRecyclerView");
+        super.onAttachedToRecyclerView(recyclerView);
+        final RecyclerView.LayoutManager layoutManager = recyclerView.getLayoutManager();
+        if (layoutManager instanceof GridLayoutManager) {
+            final GridLayoutManager gridLayoutManager = (GridLayoutManager) layoutManager;
+            gridLayoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
+                @Override
+                public int getSpanSize(int position) {
+                    int result = 1;
+                    int viewType = getItemViewType(position);
+                    if (mFooterViewTypes.contains(viewType)) {
+                        result = ((GridLayoutManager) layoutManager).getSpanCount();
+                    } else if (mHeaderViews.contains(viewType)) {
+                        result = ((GridLayoutManager) layoutManager).getSpanCount();
+                    }
+//                    Log.e("HeaderAdapter", "onAttachedToRecyclerView getSpanSize==" + result);
+                    return result;
+                }
+            });
+        }
+    }
 
+    @Override
+    public void onViewAttachedToWindow(RecyclerView.ViewHolder holder) {
+        int position = holder.getLayoutPosition();
+        int viewType = getItemViewType(position);
+        if (mFooterViewTypes.contains(viewType) || mHeaderViews.contains(viewType)) {
+            ViewGroup.LayoutParams lp = holder.itemView.getLayoutParams();
+            if (lp != null
+                    && lp instanceof StaggeredGridLayoutManager.LayoutParams) {
+                StaggeredGridLayoutManager.LayoutParams p = (StaggeredGridLayoutManager.LayoutParams) lp;
+                p.setFullSpan(true);
+            }
+        }
+    }
     /**
      * @return RecyclerView.Adapter
      */

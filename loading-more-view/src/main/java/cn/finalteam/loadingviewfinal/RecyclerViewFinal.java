@@ -125,6 +125,7 @@ public class RecyclerViewFinal extends RecyclerView implements OnScrollBottomLis
 
         adapter.registerAdapterDataObserver(mDataObserver);
         mHeaderAndFooterRecyclerViewAdapter.setAdapter(adapter);
+        mHeaderAndFooterRecyclerViewAdapter.onAttachedToRecyclerView(this);//手动调用
     }
 
     @Override

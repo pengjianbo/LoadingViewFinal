@@ -2,7 +2,7 @@ package cn.finalteam.loadingviewfinal.sample.ui.fragment.ptr;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.GridLayoutManager;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.Toast;
@@ -61,9 +61,16 @@ public class PtrRecyclerViewFragment extends BaseFragment {
 
         mGameList = new ArrayList<>();
         mNewGameRvAdapter = new NewGameRvAdapter(getContext(), mGameList);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
-        linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
-        mRvGames.setLayoutManager(linearLayoutManager);
+        //        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
+//        linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+//        mRvGames.setLayoutManager(linearLayoutManager);
+        //        mRvGames.setLayoutManager(linearLayoutManager);
+        GridLayoutManager gridLayoutManager= new GridLayoutManager(getContext(), 2,
+                GridLayoutManager.VERTICAL, false);
+// 设置布局管理器
+        mRvGames.setLayoutManager(gridLayoutManager);
+//        mRvGames.setLayoutManager(new StaggeredGridLayoutManager(2,
+//                StaggeredGridLayoutManager.VERTICAL));
         mRvGames.setEmptyView(mFlEmptyView);
         mRvGames.setAdapter(mNewGameRvAdapter);
 
